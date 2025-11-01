@@ -1,4 +1,3 @@
-/* RESET + GLOBAL -------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -9,11 +8,10 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #f5f5f5;
   background: #000;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  overflow: hidden;
 }
 
-/* BACKGROUND CROSSFADE -------------------------- */
+/* Background crossfade */
 .background {
   position: fixed;
   top: 0; left: 0;
@@ -47,7 +45,7 @@ body {
   25%, 75% { opacity: 1; }
 }
 
-/* HEADER + HERO ANIMATION ------------------------ */
+/* Header and floating nav */
 header {
   text-align: center;
   padding-top: 8rem;
@@ -55,23 +53,17 @@ header {
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .name {
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
   letter-spacing: 2px;
-  margin-bottom: 2.5rem;
   color: #fff;
   text-shadow: 0 0 25px rgba(255,255,255,0.3);
+  margin-bottom: 3rem;
   animation: glowIn 3s ease-in-out forwards;
 }
 
@@ -80,7 +72,7 @@ header {
   100% { opacity: 1; text-shadow: 0 0 25px rgba(255,255,255,0.4); }
 }
 
-/* FLOATING NAV BAR ------------------------------ */
+/* Floating nav */
 .floating-nav {
   display: inline-block;
   background: rgba(255, 255, 255, 0.08);
@@ -112,7 +104,6 @@ nav a {
   transition: all 0.35s ease;
 }
 
-/* NAV HOVER EFFECT ------------------------------ */
 nav a::after {
   content: "";
   position: absolute;
@@ -135,43 +126,13 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-/* SECTIONS -------------------------------------- */
-section {
-  text-align: center;
-  padding: 7rem 2rem;
-  backdrop-filter: blur(8px);
-  background-color: rgba(0, 0, 0, 0.45);
-  max-width: 850px;
-  margin: 0 auto 5rem;
-  border-radius: 1rem;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  color: #e0b973;
-  margin-bottom: 1.5rem;
-}
-
-section p {
-  line-height: 1.7;
-  font-size: 1.1rem;
-  color: #f1f1f1;
-}
-
-/* FOOTER ---------------------------------------- */
 footer {
   text-align: center;
-  padding: 2rem;
+  position: fixed;
+  bottom: 1rem;
+  width: 100%;
   font-size: 0.9rem;
   color: #bbb;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.3);
+  padding: 0.5rem;
 }
