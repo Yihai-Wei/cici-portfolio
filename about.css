@@ -1,0 +1,105 @@
+body {
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* --- Two sides rushing in --- */
+.about-bg .side {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.left {
+  left: -50%;
+  background-image: url('images/clash1.jpeg');
+  animation: leftIn 1.5s ease-out forwards;
+}
+
+.right {
+  right: -50%;
+  background-image: url('images/clash2.jpeg');
+  animation: rightIn 1.5s ease-out forwards;
+}
+
+@keyframes leftIn {
+  0% { left: -50%; filter: blur(8px); }
+  80% { left: 0; }
+  100% { left: 0; filter: blur(0); }
+}
+
+@keyframes rightIn {
+  0% { right: -50%; filter: blur(8px); }
+  80% { right: 0; }
+  100% { right: 0; filter: blur(0); }
+}
+
+/* --- Impact flash --- */
+.impact-flash {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle, rgba(255,200,80,0.8) 0%, transparent 60%);
+  opacity: 0;
+  z-index: -1;
+  animation: flash 1s ease-out 1.3s forwards;
+}
+
+@keyframes flash {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* --- Text missiles --- */
+.intro-text {
+  text-align: center;
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.intro-text h1, .intro-text p {
+  opacity: 0;
+  animation: flyIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.intro-text h1 { 
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  animation-delay: 1.2s;
+}
+
+.intro-text p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  animation-delay: 1.4s;
+}
+
+@keyframes flyIn {
+  0% { transform: translateY(-100px) scale(0.8); opacity: 0; filter: blur(4px); }
+  70% { opacity: 1; filter: blur(0); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+/* --- Back link --- */
+.back-home {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  text-decoration: none;
+  color: #e0b973;
+  font-weight: 600;
+  transition: 0.3s;
+  z-index: 3;
+}
+.back-home:hover {
+  text-shadow: 0 0 10px #e0b973;
+}
