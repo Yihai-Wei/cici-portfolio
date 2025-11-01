@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Xilei Liu</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css" />
 </head>
-<body class="content-page">
-  <header>
-    <h1>About</h1>
-    <nav>
-      <a href="index.html">Home</a>
-    </nav>
-  </header>
-  <main>
-    <p>I am a musician dedicated to expressive performance, artistic growth, and human connection through music.</p>
-  </main>
+
+<body>
+  <!-- 🔥 Particle canvas -->
+  <div id="tsparticles"></div>
+
+  <!-- Background clash -->
+  <div class="about-bg">
+    <div class="side left"></div>
+    <div class="side right"></div>
+    <div class="impact-flash"></div>
+  </div>
+
+  <!-- Text flying in -->
+  <section class="intro-text">
+    <h1>I am Xilei Liu</h1>
+    <p>
+      A musician dedicated to expressive performance, artistic growth,  
+      and the beauty of human connection through music.
+    </p>
+  </section>
+
+  <!-- Back button -->
+  <a class="back-home" href="index.html">← Back Home</a>
+
+  <!-- 🔥 tsParticles Library + Custom Script -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script src="about-particles.js"></script>
 </body>
 </html>
