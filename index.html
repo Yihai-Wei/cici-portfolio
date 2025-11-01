@@ -1,37 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Xilei Liu | Music Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
+/* Floating nav - separate elegant bubbles */
+.floating-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  animation: float 6s ease-in-out infinite;
+  margin-top: 1.5rem;
+}
 
-<body>
-  <!-- Background crossfade -->
-  <div class="background">
-    <div class="bg bg1"></div>
-    <div class="bg bg2"></div>
-  </div>
+.floating-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  <!-- Hero section -->
-  <header>
-    <h1 class="name">Xilei Liu</h1>
-    <nav class="floating-nav">
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="awards.html">Awards</a></li>
-        <li><a href="more.html">More About Me</a></li>
-      </ul>
-    </nav>
-  </header>
+.floating-nav li {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 40px;
+  backdrop-filter: blur(12px);
+  padding: 0.8rem 1.6rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.35s ease;
+}
 
-  <footer>
-    <p>© 2025 Xilei Liu | Designed by Eason Wei</p>
-  </footer>
+.floating-nav li:hover {
+  transform: translateY(-6px) scale(1.1);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 25px rgba(224, 185, 115, 0.45);
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.floating-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.floating-nav a:hover {
+  color: #e0b973;
+  text-shadow: 0 0 10px #e0b973;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
