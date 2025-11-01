@@ -6,45 +6,36 @@
   <title>About | Xilei Liu</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="about.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- 🔥 Particle canvas -->
-  <div id="tsparticles"></div>
-
-  <!-- Background clash -->
-  <div class="about-bg">
-    <div class="side left"></div>
-    <div class="side right"></div>
-    <div class="impact-flash"></div>
+  <!-- Reuse the same animated background -->
+  <div class="background">
+    <div class="bg bg1"></div>
+    <div class="bg bg2"></div>
   </div>
 
-  <!-- Text flying in -->
-  <section class="intro-text">
-    <h1>I am Xilei Liu</h1>
-    <p class="flying-text">
-      <span>Music</span>
-      <span>speaks</span>
-      <span>where</span>
-      <span>words</span>
-      <span>fail;</span>
-      <span>every</span>
-      <span>note</span>
-      <span>is</span>
-      <span>a</span>
-      <span>heartbeat,</span>
-      <span>every</span>
-      <span>silence</span>
-      <span>a</span>
-      <span>breath.</span>
+  <!-- Semi-transparent overlay to focus the text -->
+  <div class="overlay"></div>
+
+  <!-- About content -->
+  <main class="about-container">
+    <h1>About Me</h1>
+    <p>
+      From an early age, I discovered my voice not merely as an instrument of sound, but as a vessel of emotion.
+      Trained in the classical tradition of Bel canto, I have dedicated myself to exploring the depth, nuance,
+      and expressiveness that this art form embodies. Through years of vocal study, stage performance,
+      and collaboration with pianists and chamber ensembles, I have come to appreciate how music bridges
+      the gap between discipline and imagination. Whether interpreting the works of Mozart and Donizetti
+      or experimenting with contemporary compositions, I strive to communicate sincerity, balance, and beauty
+      in every phrase. Beyond performance, I am deeply interested in the intersection of voice pedagogy and
+      artistic innovation — how centuries-old technique can coexist with modern interpretation.
+      As I continue my journey in graduate study, my goal is to refine my artistry, expand my repertoire,
+      and contribute my voice to the evolving landscape of classical music.
     </p>
-  </section>
 
-  <!-- Back button -->
-  <a class="back-home" href="index.html">← Back Home</a>
-
-  <!-- 🔥 tsParticles Library + Custom Script -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
-  <script src="about-particles.js"></script>
+    <a href="index.html" class="back-home">← Back Home</a>
+  </main>
 </body>
 </html>
